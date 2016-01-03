@@ -1,0 +1,18 @@
+/Users/sunnygarg/.rvm/rubies/ruby-2.2.1/bin/ruby -r ./siteconf20160104-24184-1gsrekp.rb extconf.rb
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling bcrypt.c
+compiling bcrypt_ext.c
+bcrypt_ext.c:63:10: warning: implicit declaration of function 'rb_thread_blocking_region' is invalid in C99 [-Wimplicit-function-declaration]
+                        ret = rb_thread_blocking_region(bcrypt_wrapper, &args, RUBY_UBF_IO, 0);
+                              ^
+1 warning generated.
+compiling blowfish.c
+linking shared-object bcrypt_ext.bundle
+ld: warning: directory not found for option '-L/Users/haven/.sm/pkg/active/lib'
+
+make "DESTDIR=" install
+/usr/bin/install -m 0755 bcrypt_ext.bundle ./.gem.20160104-24184-1gfb61r
